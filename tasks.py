@@ -3,6 +3,7 @@ import shutil
 from robocorp import browser
 from robocorp.tasks import task
 from RPA.Archive import Archive
+from RPA.Assistant import Assistant
 from RPA.HTTP import HTTP
 from RPA.PDF import PDF
 from RPA.Tables import Tables
@@ -17,15 +18,24 @@ def order_robots_from_RobotSpareBin():
     Creates ZIP archive of the receipts and the images.
     """
     browser.configure(slowmo=100)
-    open_robot_order_website()
+    user_input_task()
     download_csv_file()
     fill_order_form_with_csv_data()
     archive_receipts()
     clean_up()
 
-def open_robot_order_website():
+def user_input_task():
+    assistant = Assistant()
+    assistant.add_heading("Input from user")
+    assistant.add_text_input("text_input", placeholder="Please enter URL")
+    assistant.add_submit_buttons("Submit", default="Submit")
+    result = assistant.run_dialog()
+    url = result.text_input
+    open_robot_order_website(url)
+
+def open_robot_order_website(url):
     """Navigates to the robot order website URL and clicks on the consent button"""
-    browser.goto("https://robotsparebinindustries.com/#/robot-order")
+    browser.goto(url)
     page = browser.page()
     page.click("button:text('OK')")
 
@@ -45,7 +55,6 @@ def fill_and_submit_order_form(order):
             page.click("#order-another")
             page.click("text=OK")
             break
-
 
 def download_csv_file():
     """Downloads the robot orders CSV file"""

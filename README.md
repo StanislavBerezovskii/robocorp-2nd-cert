@@ -1,3 +1,6 @@
+IMPORTANT: Use the following Link when prompted to navigate the bot to the order website:
+https://robotsparebinindustries.com/orders.csv](https://robotsparebinindustries.com/#/robot-order)
+
 # Template: Python - Minimal
 
 This template leverages the new [Python framework](https://github.com/robocorp/robocorp), the [libraries](https://github.com/robocorp/robocorp/blob/master/docs/README.md#python-libraries) from to same project as well.

@@ -25,6 +25,11 @@ def order_robots_from_RobotSpareBin():
     clean_up()
 
 def user_input_task():
+    """
+    Asks the user for the robot order website URL
+    Use the following Link when prompted to navigate the bot to the order website:
+    https://robotsparebinindustries.com/orders.csv](https://robotsparebinindustries.com/#/robot-order)
+    """
     assistant = Assistant()
     assistant.add_heading("Input from user")
     assistant.add_text_input("text_input", placeholder="Please enter URL")

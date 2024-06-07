@@ -1,5 +1,5 @@
-IMPORTANT: Use the following Link when prompted to navigate the bot to the example data:
-https://robotsparebinindustries.com/orders.csv
+IMPORTANT: Use the following Link when prompted to navigate the bot to the order website:
+https://robotsparebinindustries.com/orders.csv](https://robotsparebinindustries.com/#/robot-order)
 
 # Template: Python - Minimal
 

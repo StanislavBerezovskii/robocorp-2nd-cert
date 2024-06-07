@@ -28,7 +28,7 @@ def user_input_task():
     """
     Asks the user for the robot order website URL
     Use the following Link when prompted to navigate the bot to the order website:
-    https://robotsparebinindustries.com/orders.csv](https://robotsparebinindustries.com/#/robot-order)
+    https://robotsparebinindustries.com/orders.csv](https://robotsparebinindustries.com/#/robot-order
     """
     assistant = Assistant()
     assistant.add_heading("Input from user")
